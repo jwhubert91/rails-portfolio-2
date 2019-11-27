@@ -17995,3 +17995,107 @@ Processing by WorksController#index as HTML
 Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/works" for ::1 at 2019-11-27 17:24:07 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (1.4ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:8
+  Rendered collection of works/_work.erb [12 times] (3.8ms)
+  Rendered works/index.html.erb within layouts/work (43.4ms)
+  Rendered shared/_nav.html.erb (1.8ms)
+Completed 200 OK in 96ms (Views: 61.8ms | ActiveRecord: 21.5ms)
+
+
+Started GET "/blogs" for ::1 at 2019-11-27 17:24:10 -0500
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (2.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:18
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [10 times] (26.8ms)
+  Rendered blogs/index.html.erb within layouts/blog (52.4ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 86ms (Views: 56.6ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/blogs" for ::1 at 2019-11-27 17:24:10 -0500
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:18
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [10 times] (14.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (16.7ms)
+  Rendered shared/_nav.html.erb (0.9ms)
+Completed 200 OK in 45ms (Views: 39.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for ::1 at 2019-11-27 17:27:09 -0500
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:18
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/_blog.html.erb:2
+  Rendered collection of blogs/_blog.html.erb [10 times] (22.6ms)
+  Rendered blogs/index.html.erb within layouts/blog (25.9ms)
+  Rendered shared/_nav.html.erb (1.3ms)
+Completed 200 OK in 63ms (Views: 60.4ms | ActiveRecord: 1.2ms)
+
+

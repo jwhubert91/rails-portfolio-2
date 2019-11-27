@@ -5,14 +5,4 @@
 <br>
 <br>
 
-<% @portfolio_items.each do |work| %>
-
-	<hr>
-	<p><%= link_to work.title, work_show_path(work.id) %></p>
-	<p><%= work.subtitle %></p>
-	<p><%= work.body %></p>
-	<%= image_tag work.thumb_img unless work.thumb_img.nil? %>
-	<p><%= link_to "Edit", edit_work_path(work.id) %></p>
-	<p><%= link_to 'Delete Item', work, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-
-<% end %>
+<%= render partial: 'work', collection: @portfolio_items %>

@@ -16634,3 +16634,453 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 122ms (Views: 100.3ms | ActiveRecord: 11.3ms)
 
 
+Started GET "/" for ::1 at 2019-11-27 14:48:05 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  [1m[36mWork Load (2.1ms)[0m  [1m[34mSELECT  "works".* FROM "works" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:12
+  Rendered pages/home.html.erb within layouts/application (35.6ms)
+  Rendered shared/_nav.html.erb (1.5ms)
+Completed 200 OK in 93ms (Views: 79.9ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/works" for ::1 at 2019-11-27 14:48:11 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (1.9ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:8
+  Rendered works/index.html.erb within layouts/work (9.7ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (1.4ms)
+Completed 200 OK in 69ms (Views: 63.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/works" for ::1 at 2019-11-27 14:48:11 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:8
+  Rendered works/index.html.erb within layouts/work (5.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/blogs" for ::1 at 2019-11-27 14:48:19 -0500
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:17
+  [1m[36mTopic Load (3.7ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  Rendered blogs/index.html.erb within layouts/blog (35.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (0.9ms)
+Completed 200 OK in 88ms (Views: 79.2ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/blogs" for ::1 at 2019-11-27 14:48:20 -0500
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:17
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  Rendered blogs/index.html.erb within layouts/blog (14.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 40ms (Views: 36.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/blogs" for ::1 at 2019-11-27 14:55:52 -0500
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:17
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  Rendered blogs/index.html.erb within layouts/blog (54.7ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (2.3ms)
+Completed 200 OK in 131ms (Views: 118.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/works" for ::1 at 2019-11-27 14:55:56 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (6.7ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:8
+  Rendered works/index.html.erb within layouts/work (15.2ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (2.2ms)
+Completed 200 OK in 110ms (Views: 96.1ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/works" for ::1 at 2019-11-27 14:55:56 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:8
+  Rendered works/index.html.erb within layouts/work (7.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (1.6ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/works" for ::1 at 2019-11-27 15:03:18 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (1.0ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:8
+  Rendered works/index.html.erb within layouts/work (4.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/works" for ::1 at 2019-11-27 15:03:45 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.7ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:8
+  Rendered works/index.html.erb within layouts/work (9.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (0.9ms)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/blogs" for ::1 at 2019-11-27 15:03:47 -0500
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (9.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:17
+  [1m[36mTopic Load (1.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  Rendered blogs/index.html.erb within layouts/blog (36.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (2.4ms)
+Completed 200 OK in 76ms (Views: 61.5ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/blogs" for ::1 at 2019-11-27 15:03:47 -0500
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:17
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  [1m[36mCACHE Topic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/blogs/index.html.erb:19
+  Rendered blogs/index.html.erb within layouts/blog (17.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (1.7ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-27 15:03:50 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (1.8ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:12
+  Rendered pages/home.html.erb within layouts/application (17.6ms)
+  Rendered shared/_nav.html.erb (1.9ms)
+Completed 200 OK in 117ms (Views: 108.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-27 15:03:50 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:12
+  Rendered pages/home.html.erb within layouts/application (29.1ms)
+  Rendered shared/_nav.html.erb (5.7ms)
+Completed 200 OK in 117ms (Views: 112.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2019-11-27 15:08:19 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:4
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  [1m[36mWork Load (0.6ms)[0m  [1m[34mSELECT  "works".* FROM "works" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:12
+  Rendered pages/home.html.erb within layouts/application (21.0ms)
+  Rendered shared/_nav.html.erb (1.8ms)
+Completed 200 OK in 79ms (Views: 70.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/works" for ::1 at 2019-11-27 15:08:21 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (10.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:8
+  Rendered works/index.html.erb within layouts/work (18.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (6.9ms)
+Completed 200 OK in 61ms (Views: 47.9ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/works" for ::1 at 2019-11-27 15:08:21 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (1.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:8
+  Rendered works/index.html.erb within layouts/work (7.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/works/new" for ::1 at 2019-11-27 15:08:24 -0500
+Processing by WorksController#new as HTML
+  Rendering works/new.html.erb within layouts/work
+  Rendered works/_form.html.erb (24.5ms)
+  Rendered works/new.html.erb within layouts/work (26.5ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 282ms (Views: 62.2ms | ActiveRecord: 28.7ms)
+
+
+Started GET "/works" for ::1 at 2019-11-27 15:08:29 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.8ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:8
+  Rendered works/index.html.erb within layouts/work (11.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 60ms (Views: 57.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/work/1" for ::1 at 2019-11-27 15:08:30 -0500
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (2.6ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:46
+  Rendering works/show.html.erb within layouts/work
+  [1m[36mTechnology Load (1.6ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."work_id" = $1[0m  [["work_id", 1]]
+  ↳ app/views/works/show.html.erb:9
+  Rendered works/show.html.erb within layouts/work (10.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 55ms (Views: 40.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/works/new" for ::1 at 2019-11-27 15:08:55 -0500
+Processing by WorksController#new as HTML
+  Rendering works/new.html.erb within layouts/work
+  Rendered works/_form.html.erb (4.3ms)
+  Rendered works/new.html.erb within layouts/work (6.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 40ms (Views: 32.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/works" for ::1 at 2019-11-27 15:09:15 -0500
+Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kyD/1K1VccAxVQ9K5u8QNJX8o9Rn2v7qrry9bVmwIQqMbNkdFtrdV9JFOeCfS1ERN4RyMPj420hGjz7mKLS99g==", "work"=>{"title"=>"dubya", "subtitle"=>"bee", "body"=>"the dubya-bee", "technologies_attributes"=>{"0"=>{"name"=>"technolog-ayo"}, "1"=>{"name"=>"new one"}, "2"=>{"name"=>"another one"}}}, "commit"=>"Create Work"}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/works_controller.rb:21
+  [1m[36mWork Create (7.7ms)[0m  [1m[32mINSERT INTO "works" ("title", "subtitle", "body", "main_img", "thumb_img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "dubya"], ["subtitle", "bee"], ["body", "the dubya-bee"], ["main_img", "http://placehold.it/600x400"], ["thumb_img", "http://placehold.it/350x250"], ["created_at", "2019-11-27 20:09:15.259612"], ["updated_at", "2019-11-27 20:09:15.259612"]]
+  ↳ app/controllers/works_controller.rb:21
+  [1m[36mTechnology Create (7.4ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "work_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "technolog-ayo"], ["work_id", 12], ["created_at", "2019-11-27 20:09:15.270180"], ["updated_at", "2019-11-27 20:09:15.270180"]]
+  ↳ app/controllers/works_controller.rb:21
+  [1m[36mTechnology Create (1.0ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "work_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "new one"], ["work_id", 12], ["created_at", "2019-11-27 20:09:15.278841"], ["updated_at", "2019-11-27 20:09:15.278841"]]
+  ↳ app/controllers/works_controller.rb:21
+  [1m[36mTechnology Create (0.6ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "work_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "another one"], ["work_id", 12], ["created_at", "2019-11-27 20:09:15.281050"], ["updated_at", "2019-11-27 20:09:15.281050"]]
+  ↳ app/controllers/works_controller.rb:21
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/works_controller.rb:21
+Redirected to http://localhost:3000/works
+Completed 302 Found in 33ms (ActiveRecord: 19.4ms)
+
+
+Started GET "/works" for ::1 at 2019-11-27 15:09:15 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.6ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:8
+  Rendered works/index.html.erb within layouts/work (6.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/works/12/edit" for ::1 at 2019-11-27 15:09:27 -0500
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mWork Load (0.8ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:30
+  Rendering works/edit.html.erb within layouts/work
+  [1m[36mTechnology Load (0.9ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."work_id" = $1[0m  [["work_id", 12]]
+  ↳ app/views/works/_form.html.erb:20
+  Rendered works/_form.html.erb (13.8ms)
+  Rendered works/edit.html.erb within layouts/work (15.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 40ms (Views: 33.7ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/works/12" for ::1 at 2019-11-27 15:24:08 -0500
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/O22Ko22TCuLFVX4fxvCw0as/GoL/1q8MpVlH0UjZs+Ftf0oOPUwSkq7VYN6cYTMEVlNER4QVcVytAH+nATPKw==", "work"=>{"title"=>"dubya", "subtitle"=>"bee", "body"=>"the dubya-bee", "technologies_attributes"=>{"0"=>{"name"=>"technolog-ayo", "id"=>"5"}, "1"=>{"name"=>"new one", "id"=>"6"}, "2"=>{"name"=>"another one", "id"=>"7"}}}, "commit"=>"Update Work", "id"=>"12"}
+  [1m[36mWork Load (1.0ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/works_controller.rb:34
+Unpermitted parameter: :id
+Unpermitted parameter: :id
+Unpermitted parameter: :id
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/works_controller.rb:37
+  [1m[36mTechnology Create (7.1ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "work_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "technolog-ayo"], ["work_id", 12], ["created_at", "2019-11-27 20:24:09.105595"], ["updated_at", "2019-11-27 20:24:09.105595"]]
+  ↳ app/controllers/works_controller.rb:37
+  [1m[36mTechnology Create (0.5ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "work_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "new one"], ["work_id", 12], ["created_at", "2019-11-27 20:24:09.113896"], ["updated_at", "2019-11-27 20:24:09.113896"]]
+  ↳ app/controllers/works_controller.rb:37
+  [1m[36mTechnology Create (0.6ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "work_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "another one"], ["work_id", 12], ["created_at", "2019-11-27 20:24:09.115407"], ["updated_at", "2019-11-27 20:24:09.115407"]]
+  ↳ app/controllers/works_controller.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/works_controller.rb:37
+Redirected to http://localhost:3000/works
+Completed 302 Found in 161ms (ActiveRecord: 28.9ms)
+
+
+Started GET "/works" for ::1 at 2019-11-27 15:24:09 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:8
+  Rendered works/index.html.erb within layouts/work (4.7ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 72ms (Views: 62.4ms | ActiveRecord: 8.1ms)
+
+

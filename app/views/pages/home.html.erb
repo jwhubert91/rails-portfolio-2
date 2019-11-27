@@ -1,0 +1,12 @@
+<h1>Hi <%= current_user ? current_user.first_name : 'there' %>, welcome to the home page!</h1>
+
+<h3>Blog posts:</h3>
+<%= @posts.inspect %>
+
+
+<h3>Skills:</h3>
+<%= @skills.inspect %>
+
+
+<h3>Portfolio:</h3>
+<%= @works.inspect %>

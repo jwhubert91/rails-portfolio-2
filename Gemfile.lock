@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/jwhubert91/hubert_copyright_tool
+  revision: 3dd908ea2d07db5dfa9d8aae4da25a1ed1fff13f
+  specs:
+    hubert_copyright_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -211,6 +217,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise (~> 4.7, >= 4.7.1)
   friendly_id (~> 5.2.4)
+  hubert_copyright_tool!
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)

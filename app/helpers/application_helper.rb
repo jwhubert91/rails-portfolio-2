@@ -17,5 +17,9 @@ module ApplicationHelper
     end
 	end
 
+	def copyright_generator
+		HubertCopyrightTool::Renderer.copyright("James Hubert","All rights reserved")
+	end
+
 
 end

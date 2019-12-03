@@ -60,3 +60,4 @@ gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'hubert_copyright_tool', git: "https://github.com/jwhubert91/hubert_copyright_tool"
+gem 'petergate', '~> 2.0', '>= 2.0.1'

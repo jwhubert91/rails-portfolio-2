@@ -1,5 +1,7 @@
 <h1>Angular Portfolio items</h1>
 
+<%= link_to "Create New Item", new_work_path if logged_in?(:site_admin) %>
+
 <% @angular_items.each do |work| %>
 
 	<hr>
@@ -7,7 +9,7 @@
 	<p><%= work.subtitle %></p>
 	<p><%= work.body %></p>
 	<%= image_tag work.thumb_img unless work.thumb_img.nil? %>
-	<p><%= link_to "Edit", edit_work_path(work.id) %></p>
-	<p><%= link_to 'Delete Item', work, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+	<p><%= link_to "Edit", edit_work_path(work.id) if logged_in?(:site_admin) %></p>
+	<p><%= link_to 'Delete Item', work, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></p>
 
 <% end %>

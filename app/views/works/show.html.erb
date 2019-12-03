@@ -10,5 +10,7 @@
 	<p><%= t.name %></p>
 <% end %>
 
-<hr>
+<p><%= link_to "Edit", edit_work_path(@portfolio_item.id) if logged_in?(:site_admin) %></p>
+<p><%= link_to 'Delete Item', @portfolio_item, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></p>
 
+<hr>

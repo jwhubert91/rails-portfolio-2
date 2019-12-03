@@ -20364,3 +20364,96 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 3086ms (Views: 3029.5ms | ActiveRecord: 23.5ms)
 
 
+Started GET "/" for ::1 at 2019-12-03 15:07:59 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 151ms (Views: 137.9ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/" for ::1 at 2019-12-03 15:08:46 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (1.4ms)
+Completed 200 OK in 85ms (Views: 81.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2019-12-03 15:33:21 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_application_nav.html.erb (1.6ms)
+Completed 200 OK in 107ms (Views: 100.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2019-12-03 15:37:27 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_application_nav.html.erb (2.0ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 1.4ms)
+
+
+  
+SyntaxError (/Users/jameshubert/Documents/Programming/UdemyRails/portfolio_2/app/views/shared/_application_nav.html.erb:5: syntax error, unexpected '='
+...nk_to "Home", root_path, class='nav-link' );@output_buffer.s...
+...                              ^
+/Users/jameshubert/Documents/Programming/UdemyRails/portfolio_2/app/views/shared/_application_nav.html.erb:6: syntax error, unexpected '='
+... "About Me", about_path, class='nav-link' );@output_buffer.s...
+...                              ^
+/Users/jameshubert/Documents/Programming/UdemyRails/portfolio_2/app/views/shared/_application_nav.html.erb:7: syntax error, unexpected '='
+..."Contact", contact_path, class='nav-link' );@output_buffer.s...
+...                              ^
+/Users/jameshubert/Documents/Programming/UdemyRails/portfolio_2/app/views/shared/_application_nav.html.erb:8: syntax error, unexpected '='
+...k_to "Blog", blogs_path, class='nav-link' );@output_buffer.s...
+...                              ^
+/Users/jameshubert/Documents/Programming/UdemyRails/portfolio_2/app/views/shared/_application_nav.html.erb:9: syntax error, unexpected '='
+..."Portfolio", works_path, class='nav-link' );@output_buffer.s...
+...                              ^):
+  
+app/views/shared/_application_nav.html.erb:5: syntax error, unexpected '='
+app/views/shared/_application_nav.html.erb:6: syntax error, unexpected '='
+app/views/shared/_application_nav.html.erb:7: syntax error, unexpected '='
+app/views/shared/_application_nav.html.erb:8: syntax error, unexpected '='
+app/views/shared/_application_nav.html.erb:9: syntax error, unexpected '='
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___1848581808718189084_70221728037640'
+Started GET "/" for ::1 at 2019-12-03 15:38:34 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_application_nav.html.erb (1.5ms)
+Completed 200 OK in 82ms (Views: 79.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-12-03 15:40:30 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (0.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 74ms (Views: 70.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/contact" for ::1 at 2019-12-03 15:40:47 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.7ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 132ms (Views: 113.4ms | ActiveRecord: 0.7ms)
+
+

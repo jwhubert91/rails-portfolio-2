@@ -20352,3 +20352,15 @@ Processing by WorksController#index as HTML
 Completed 200 OK in 79ms (Views: 70.8ms | ActiveRecord: 1.8ms)
 
 
+Started GET "/" for ::1 at 2019-12-03 14:38:19 -0500
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 3086ms (Views: 3029.5ms | ActiveRecord: 23.5ms)
+
+

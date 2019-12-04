@@ -20457,3 +20457,66 @@ Processing by PagesController#contact as HTML
 Completed 200 OK in 132ms (Views: 113.4ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/contact" for ::1 at 2019-12-03 16:54:19 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (1.1ms)
+  Rendered shared/_application_nav.html.erb (3.4ms)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 500 Internal Server Error in 561ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `source_helper' for #<#<Class:0x00007fbb88a1dd08>:0x00007fbb85192060>):
+    25: 
+    26:               <%= copyright_generator %>
+    27: 
+    28:               <%= source_helper("application") %>
+    29: 
+    30:         </div>
+    31: 
+  
+app/views/layouts/application.html.erb:28:in `_app_views_layouts_application_html_erb___1848581808718189084_70221684268780'
+Started GET "/contact" for ::1 at 2019-12-03 16:54:59 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (1.4ms)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 78ms (Views: 74.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2019-12-04 14:16:17 -0500
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (3.2ms)
+  Rendered shared/_application_nav.html.erb (1.8ms)
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 1060ms (Views: 879.7ms | ActiveRecord: 35.8ms)
+
+
+Started GET "/about" for ::1 at 2019-12-04 14:16:27 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.9ms)
+  Rendered shared/_application_nav.html.erb (1.3ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 79ms (Views: 74.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-04 14:32:04 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+  Rendered shared/_application_nav.html.erb (1.9ms)
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 154ms (Views: 133.9ms | ActiveRecord: 12.8ms)
+
+

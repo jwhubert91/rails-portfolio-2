@@ -17,13 +17,11 @@
 
               <%= render "shared/application_nav" %>
 
-              <%= login_helper %>
-
               <%= yield %>
 
               <%= session_tracker_helper %>
 
-              <%= copyright_generator %>
+              <%= render "shared/application_footer" %>
 
         </div>
 

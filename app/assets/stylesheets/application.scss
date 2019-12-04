@@ -21,6 +21,9 @@ a:hover {
   border: .05rem solid #fff;
 }
 
+.text-center {
+  text-align: center;
+}
 
 /*
  * Base structure
@@ -41,9 +44,8 @@ body {
 }
 
 .cover-container {
-  max-width: 42em;
+  max-width: 55em;
 }
-
 
 /*
  * Header
@@ -87,7 +89,6 @@ body {
   }
 }
 
-
 /*
  * Cover
  */
@@ -98,7 +99,6 @@ body {
   padding: .75rem 1.25rem;
   font-weight: 700;
 }
-
 
 /*
  * Footer

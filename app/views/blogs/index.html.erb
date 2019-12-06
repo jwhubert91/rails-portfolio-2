@@ -2,7 +2,7 @@
   <h3 class="pb-4 mb-4 font-italic border-bottom">
     A Slice of Jimbo
   </h3>
-  <%= link_to 'Write New Blog', new_blog_path if logged_in?(:site_admin) %>
+  <%= link_to 'Write New Blog', new_blog_path if logged_in?(:site_admin) %><br><br>
 
   <%= render @blogs %>
 

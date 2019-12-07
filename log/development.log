@@ -26473,3 +26473,293 @@ Processing by WorksController#index as HTML
 Completed 200 OK in 93ms (Views: 84.0ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/works" for ::1 at 2019-12-06 21:51:48 -0500
+Processing by WorksController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.9ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (3.3ms)
+  Rendered works/index.html.erb within layouts/work (7.4ms)
+Completed 500 Internal Server Error in 289ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_work_nav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/jameshubert/Documents/Programming/UdemyRails/portfolio_2/app/views"
+  * "/Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/kaminari-core-1.1.1/app/views"
+  * "/Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/devise-4.7.1/app/views"
+):
+    13: 
+    14:   <body>
+    15: 
+    16:     <%= render 'shared/work_nav' %>
+    17: 
+    18:     <main role="main">
+    19: 
+  
+app/views/layouts/work.html.erb:16:in `_app_views_layouts_work_html_erb___2334924115338828403_70165192461120'
+Started GET "/works" for ::1 at 2019-12-06 21:52:32 -0500
+Processing by WorksController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (2.9ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (5.2ms)
+  Rendered works/index.html.erb within layouts/work (12.3ms)
+  Rendered works/_work_nav.html.erb (1.5ms)
+Completed 200 OK in 100ms (Views: 81.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 21:53:27 -0500
+Processing by WorksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (9.4ms)
+  Rendered works/index.html.erb within layouts/work (12.6ms)
+  Rendered works/_work_nav.html.erb (2.7ms)
+Completed 200 OK in 126ms (Views: 112.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 21:54:07 -0500
+Processing by WorksController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (6.2ms)
+  Rendered works/index.html.erb within layouts/work (10.1ms)
+  Rendered works/_work_nav.html.erb (0.9ms)
+Completed 200 OK in 109ms (Views: 97.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 21:55:19 -0500
+Processing by WorksController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.8ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (3.8ms)
+  Rendered works/index.html.erb within layouts/work (7.9ms)
+  Rendered works/_work_nav.html.erb (0.7ms)
+Completed 200 OK in 97ms (Views: 91.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 21:56:25 -0500
+Processing by WorksController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.8ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (4.8ms)
+  Rendered works/index.html.erb within layouts/work (10.6ms)
+  Rendered works/_work_nav.html.erb (1.7ms)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 1.9ms)
+
+
+  
+SyntaxError (/Users/jameshubert/Documents/Programming/UdemyRails/portfolio_2/app/views/works/_work_nav.html.erb:17: syntax error, unexpected tLABEL, expecting '='
+...r.append=( login_helper, class: 'text-white' );@output_buffe...
+...                         ^~~~~~):
+  
+app/views/works/_work_nav.html.erb:17: syntax error, unexpected tLABEL, expecting '='
+app/views/layouts/work.html.erb:16:in `_app_views_layouts_work_html_erb___2334924115338828403_70165203373880'
+Started GET "/works" for ::1 at 2019-12-06 21:57:12 -0500
+Processing by WorksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (2.2ms)
+  Rendered works/index.html.erb within layouts/work (5.2ms)
+  Rendered works/_work_nav.html.erb (1.4ms)
+Completed 200 OK in 100ms (Views: 95.2ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/logout" for ::1 at 2019-12-06 21:57:40 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oHiU2zsY8iWvFVlyofSiSjkmKsZH5d7UhGuFKNITBjd1vnpFnf+GIdkde+atbRcLhwq/mUaYAr4V3KtFdHUD+w=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/devise-4.7.1/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/devise-4.7.1/lib/devise/models/rememberable.rb:62
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-06 21:57:41 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered shared/_application_nav.html.erb (49.1ms)
+  Rendered shared/_application_footer.html.erb (0.6ms)
+Completed 200 OK in 146ms (Views: 120.0ms | ActiveRecord: 23.0ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 21:57:43 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (2.6ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (7.6ms)
+  Rendered works/index.html.erb within layouts/work (13.7ms)
+  Rendered works/_work_nav.html.erb (3.2ms)
+Completed 200 OK in 145ms (Views: 136.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 21:57:43 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (5.5ms)
+  Rendered works/index.html.erb within layouts/work (8.2ms)
+  Rendered works/_work_nav.html.erb (1.0ms)
+Completed 200 OK in 91ms (Views: 88.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 22:03:07 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.8ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (5.0ms)
+  Rendered works/index.html.erb within layouts/work (23.6ms)
+  Rendered shared/_work_nav.html.erb (2.3ms)
+  Rendered shared/_work_jumbotron.html.erb (0.5ms)
+Completed 200 OK in 217ms (Views: 103.1ms | ActiveRecord: 56.1ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 22:03:42 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (5.3ms)
+  Rendered works/index.html.erb within layouts/work (8.5ms)
+  Rendered shared/_work_nav.html.erb (1.7ms)
+  Rendered shared/_work_jumbotron.html.erb (0.5ms)
+Completed 200 OK in 132ms (Views: 95.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 22:09:00 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (6.1ms)
+  Rendered works/index.html.erb within layouts/work (25.2ms)
+  Rendered shared/_work_nav.html.erb (1.4ms)
+  Rendered shared/_work_jumbotron.html.erb (0.6ms)
+Completed 200 OK in 218ms (Views: 157.2ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 22:10:22 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (8.4ms)
+  Rendered works/index.html.erb within layouts/work (11.4ms)
+  Rendered shared/_work_nav.html.erb (2.4ms)
+  Rendered shared/_work_jumbotron.html.erb (0.7ms)
+Completed 200 OK in 89ms (Views: 85.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 22:10:24 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (5.2ms)
+  Rendered works/index.html.erb within layouts/work (8.7ms)
+  Rendered shared/_work_nav.html.erb (2.1ms)
+  Rendered shared/_work_jumbotron.html.erb (0.7ms)
+Completed 200 OK in 124ms (Views: 121.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 22:10:45 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.6ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (5.8ms)
+  Rendered works/index.html.erb within layouts/work (11.1ms)
+  Rendered shared/_work_nav.html.erb (1.9ms)
+  Rendered shared/_work_jumbotron.html.erb (0.6ms)
+Completed 200 OK in 97ms (Views: 93.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 22:10:48 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.6ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (7.7ms)
+  Rendered works/index.html.erb within layouts/work (10.8ms)
+  Rendered shared/_work_nav.html.erb (1.6ms)
+  Rendered shared/_work_jumbotron.html.erb (0.5ms)
+Completed 200 OK in 122ms (Views: 119.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 22:11:24 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (1.9ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (4.5ms)
+  Rendered works/index.html.erb within layouts/work (29.6ms)
+  Rendered shared/_work_nav.html.erb (2.4ms)
+  Rendered shared/_work_jumbotron.html.erb (0.7ms)
+Completed 200 OK in 2591ms (Views: 2586.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 22:15:49 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (1.3ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (10.6ms)
+  Rendered works/index.html.erb within layouts/work (53.8ms)
+  Rendered shared/_work_nav.html.erb (3.0ms)
+  Rendered shared/_work_jumbotron.html.erb (1.0ms)
+Completed 200 OK in 165ms (Views: 158.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 22:35:24 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (1.6ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (18.6ms)
+  Rendered works/index.html.erb within layouts/work (32.4ms)
+  Rendered shared/_work_nav.html.erb (4.3ms)
+  Rendered shared/_work_jumbotron.html.erb (0.9ms)
+  Rendered shared/_work_footer.html.erb (0.4ms)
+Completed 200 OK in 183ms (Views: 167.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/works" for ::1 at 2019-12-06 22:36:40 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (8.8ms)
+  Rendered works/index.html.erb within layouts/work (28.4ms)
+  Rendered shared/_work_nav.html.erb (1.6ms)
+  Rendered shared/_work_jumbotron.html.erb (1.3ms)
+  Rendered shared/_work_footer.html.erb (0.8ms)
+Completed 200 OK in 226ms (Views: 155.8ms | ActiveRecord: 23.4ms)
+
+

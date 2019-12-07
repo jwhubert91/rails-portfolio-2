@@ -25534,3 +25534,701 @@ Processing by BlogsController#show as HTML
 Completed 200 OK in 96ms (Views: 80.7ms | ActiveRecord: 3.0ms)
 
 
+Started GET "/blogs/blog-post-1" for ::1 at 2019-12-06 15:28:11 -0500
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"blog-post-1"}
+  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "blog-post-1"], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/friendly_id-5.2.5/lib/friendly_id/finder_methods.rb:62
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mCACHE Blog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "blog-post-1"], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/friendly_id-5.2.5/lib/friendly_id/finder_methods.rb:62
+  Rendering blogs/show.html.erb within layouts/blog
+  Rendered blogs/show.html.erb within layouts/blog (11.5ms)
+  Rendered shared/_blog_masthead.html.erb (3.1ms)
+  Rendered shared/_blog_nav.html.erb (1.5ms)
+  Rendered shared/_blog_sidebar.html.erb (1.1ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 321ms (Views: 265.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 15:28:13 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (21.4ms)
+  Rendered blogs/index.html.erb within layouts/blog (33.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.9ms)
+  Rendered shared/_blog_nav.html.erb (1.8ms)
+  Rendered shared/_blog_sidebar.html.erb (0.7ms)
+  Rendered shared/_blog_footer.html.erb (0.6ms)
+Completed 200 OK in 207ms (Views: 196.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 15:34:52 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (17.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (10.6ms)
+  Rendered blogs/index.html.erb within layouts/blog (40.7ms)
+  Rendered shared/_blog_masthead.html.erb (1.1ms)
+  Rendered shared/_blog_nav.html.erb (21.4ms)
+  Rendered shared/_blog_sidebar.html.erb (857.2ms)
+Completed 500 Internal Server Error in 1143ms (ActiveRecord: 20.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `fa_icon' for #<#<Class:0x00007f8805cb61e8>:0x00007f8805b6e948>):
+     7:   <div class="p-4">
+     8:     <h4 class="font-italic">Elsewhere</h4>
+     9:     <ol class="list-unstyled">
+    10:       <li><%= fa_icon "camera-retro" %></li> <!-- # => <i class="fa fa-camera-retro"></i> -->
+    11:       <li><a href="#">GitHub</a></li>
+    12:       <li><a href="#">Twitter</a></li>
+    13:       <li><a href="#">Facebook</a></li>
+  
+app/views/shared/_blog_sidebar.html.erb:10:in `_app_views_shared__blog_sidebar_html_erb__1022816504884027507_70111062483340'
+app/views/layouts/blog.html.erb:26:in `_app_views_layouts_blog_html_erb__3132849921326900124_70111094090520'
+Started GET "/blogs" for ::1 at 2019-12-06 15:35:18 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (7.8ms)
+  Rendered blogs/index.html.erb within layouts/blog (14.2ms)
+  Rendered shared/_blog_masthead.html.erb (1.1ms)
+  Rendered shared/_blog_nav.html.erb (2.8ms)
+  Rendered shared/_blog_sidebar.html.erb (309.8ms)
+Completed 500 Internal Server Error in 448ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `fa_icon' for #<#<Class:0x00007f8805cb61e8>:0x00007f8805af3518>):
+     7:   <div class="p-4">
+     8:     <h4 class="font-italic">Elsewhere</h4>
+     9:     <ol class="list-unstyled">
+    10:       <li><%= fa_icon "camera-retro" %></li>
+    11:       <li><a href="#">GitHub</a></li>
+    12:       <li><a href="#">Twitter</a></li>
+    13:       <li><a href="#">Facebook</a></li>
+  
+app/views/shared/_blog_sidebar.html.erb:10:in `_app_views_shared__blog_sidebar_html_erb__1022816504884027507_70111106179980'
+app/views/layouts/blog.html.erb:26:in `_app_views_layouts_blog_html_erb__3132849921326900124_70111093838100'
+Started GET "/blogs" for ::1 at 2019-12-06 15:36:13 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (15.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (21.7ms)
+Completed 500 Internal Server Error in 286ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: font-awesome.
+        on line 2:1 of app/assets/stylesheets/blogs.scss
+>> @import "font-awesome";
+
+   ^
+):
+     7: 
+     8:     <meta name="keywords" content="<%=@seo_keywords%>" />
+     9: 
+    10:     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+  
+app/assets/stylesheets/blogs.scss:2
+app/views/layouts/blog.html.erb:10:in `_app_views_layouts_blog_html_erb__3132849921326900124_70111080972340'
+Started GET "/blogs" for ::1 at 2019-12-06 15:36:36 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (12.6ms)
+  Rendered blogs/index.html.erb within layouts/blog (18.8ms)
+  Rendered shared/_blog_masthead.html.erb (1.1ms)
+  Rendered shared/_blog_nav.html.erb (3.0ms)
+  Rendered shared/_blog_sidebar.html.erb (477.3ms)
+Completed 500 Internal Server Error in 647ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `fa_icon' for #<#<Class:0x00007f8805cb61e8>:0x00007f88070b7020>):
+     7:   <div class="p-4">
+     8:     <h4 class="font-italic">Elsewhere</h4>
+     9:     <ol class="list-unstyled">
+    10:       <li><%= fa_icon "camera-retro" %></li>
+    11:       <li><a href="#">GitHub</a></li>
+    12:       <li><a href="#">Twitter</a></li>
+    13:       <li><a href="#">Facebook</a></li>
+  
+app/views/shared/_blog_sidebar.html.erb:10:in `_app_views_shared__blog_sidebar_html_erb__1022816504884027507_70111106497960'
+app/views/layouts/blog.html.erb:26:in `_app_views_layouts_blog_html_erb__3132849921326900124_70111105265180'
+Started GET "/blogs" for ::1 at 2019-12-06 16:00:37 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (3.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (11.6ms)
+  Rendered blogs/index.html.erb within layouts/blog (22.6ms)
+  Rendered shared/_blog_masthead.html.erb (0.8ms)
+  Rendered shared/_blog_nav.html.erb (2.7ms)
+  Rendered shared/_blog_sidebar.html.erb (463.8ms)
+Completed 500 Internal Server Error in 633ms (ActiveRecord: 4.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `fa_icon' for #<#<Class:0x00007f8805cb61e8>:0x00007f880733d808>):
+     7:   <div class="p-4">
+     8:     <h4 class="font-italic">Elsewhere</h4>
+     9:     <ol class="list-unstyled">
+    10:       <li><%= fa_icon "camera-retro" %></li>
+    11:       <li><a href="#">GitHub</a></li>
+    12:       <li><a href="#">Twitter</a></li>
+    13:       <li><a href="#">Facebook</a></li>
+  
+app/views/shared/_blog_sidebar.html.erb:10:in `_app_views_shared__blog_sidebar_html_erb__1022816504884027507_70111093047700'
+app/views/layouts/blog.html.erb:26:in `_app_views_layouts_blog_html_erb__3132849921326900124_70111106577340'
+Started GET "/blogs" for ::1 at 2019-12-06 16:01:34 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (11.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (16.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.7ms)
+  Rendered shared/_blog_nav.html.erb (2.9ms)
+  Rendered shared/_blog_sidebar.html.erb (0.7ms)
+  Rendered shared/_blog_footer.html.erb (0.6ms)
+Completed 200 OK in 141ms (Views: 134.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 16:01:46 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (10.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (17.1ms)
+  Rendered shared/_blog_masthead.html.erb (0.8ms)
+  Rendered shared/_blog_nav.html.erb (1.0ms)
+  Rendered shared/_blog_sidebar.html.erb (301.7ms)
+Completed 500 Internal Server Error in 389ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `fa_icon' for #<#<Class:0x00007f8805cb61e8>:0x00007f88073b4110>):
+     7:   <div class="p-4">
+     8:     <h4 class="font-italic">Elsewhere</h4>
+     9:     <ol class="list-unstyled">
+    10:       <li><%= fa_icon "camera-retro" %></li>
+    11:       <li><a href="#">GitHub</a></li>
+    12:       <li><a href="#">Twitter</a></li>
+    13:       <li><a href="#">Facebook</a></li>
+  
+app/views/shared/_blog_sidebar.html.erb:10:in `_app_views_shared__blog_sidebar_html_erb__1022816504884027507_70111100831640'
+app/views/layouts/blog.html.erb:26:in `_app_views_layouts_blog_html_erb__3132849921326900124_70111106772160'
+Started GET "/blogs" for ::1 at 2019-12-06 16:03:34 -0500
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (15.9ms)
+  Rendered blogs/index.html.erb within layouts/blog (34.4ms)
+  Rendered shared/_blog_masthead.html.erb (2.9ms)
+  Rendered shared/_blog_nav.html.erb (0.8ms)
+  Rendered shared/_blog_sidebar.html.erb (0.8ms)
+  Rendered shared/_blog_footer.html.erb (0.3ms)
+Completed 200 OK in 6873ms (Views: 6772.8ms | ActiveRecord: 36.6ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 19:15:36 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (6.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (16.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (38.8ms)
+  Rendered shared/_blog_masthead.html.erb (0.8ms)
+  Rendered shared/_blog_nav.html.erb (1.4ms)
+  Rendered shared/_blog_sidebar.html.erb (0.8ms)
+  Rendered shared/_blog_footer.html.erb (0.8ms)
+Completed 200 OK in 382ms (Views: 329.4ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 19:17:09 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (2.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (34.6ms)
+  Rendered blogs/index.html.erb within layouts/blog (57.0ms)
+  Rendered shared/_blog_masthead.html.erb (3.7ms)
+  Rendered shared/_blog_nav.html.erb (2.8ms)
+  Rendered shared/_blog_sidebar.html.erb (1.4ms)
+  Rendered shared/_blog_footer.html.erb (1.0ms)
+Completed 200 OK in 372ms (Views: 323.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 19:17:58 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (6.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (21.4ms)
+  Rendered blogs/index.html.erb within layouts/blog (34.1ms)
+  Rendered shared/_blog_masthead.html.erb (1.3ms)
+  Rendered shared/_blog_nav.html.erb (2.3ms)
+  Rendered shared/_blog_sidebar.html.erb (1.2ms)
+  Rendered shared/_blog_footer.html.erb (1.1ms)
+Completed 200 OK in 221ms (Views: 204.5ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 19:20:13 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (5.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (21.6ms)
+  Rendered blogs/index.html.erb within layouts/blog (40.0ms)
+  Rendered shared/_blog_masthead.html.erb (1.5ms)
+  Rendered shared/_blog_nav.html.erb (2.4ms)
+  Rendered shared/_blog_sidebar.html.erb (1.2ms)
+  Rendered shared/_blog_footer.html.erb (1.0ms)
+Completed 200 OK in 282ms (Views: 261.2ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 19:23:30 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (11.1ms)
+  Rendered blogs/index.html.erb within layouts/blog (31.6ms)
+  Rendered shared/_blog_masthead.html.erb (3.1ms)
+  Rendered shared/_blog_nav.html.erb (1.3ms)
+  Rendered shared/_blog_sidebar.html.erb (0.7ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 845ms (Views: 772.6ms | ActiveRecord: 25.1ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 19:28:04 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (9.2ms)
+  Rendered blogs/index.html.erb within layouts/blog (14.4ms)
+  Rendered shared/_blog_masthead.html.erb (1.3ms)
+  Rendered shared/_blog_nav.html.erb (1.7ms)
+  Rendered shared/_blog_sidebar.html.erb (1.1ms)
+  Rendered shared/_blog_footer.html.erb (0.7ms)
+Completed 200 OK in 136ms (Views: 123.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 19:31:22 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (6.8ms)
+  Rendered blogs/index.html.erb within layouts/blog (14.3ms)
+  Rendered shared/_blog_masthead.html.erb (1.2ms)
+  Rendered shared/_blog_nav.html.erb (2.9ms)
+  Rendered shared/_blog_sidebar.html.erb (0.8ms)
+  Rendered shared/_blog_footer.html.erb (0.6ms)
+Completed 200 OK in 146ms (Views: 133.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 19:44:07 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (2.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (5.7ms)
+  Rendered blogs/index.html.erb within layouts/blog (13.1ms)
+  Rendered shared/_blog_masthead.html.erb (1.6ms)
+  Rendered shared/_blog_nav.html.erb (2.2ms)
+  Rendered shared/_blog_sidebar.html.erb (0.6ms)
+  Rendered shared/_blog_footer.html.erb (0.7ms)
+Completed 200 OK in 129ms (Views: 117.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 19:44:54 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (5.6ms)
+  Rendered blogs/index.html.erb within layouts/blog (9.2ms)
+  Rendered shared/_blog_masthead.html.erb (1.1ms)
+  Rendered shared/_blog_nav.html.erb (0.9ms)
+  Rendered shared/_blog_sidebar.html.erb (1.0ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 95ms (Views: 90.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 19:45:23 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (10.4ms)
+  Rendered blogs/index.html.erb within layouts/blog (15.4ms)
+  Rendered shared/_blog_masthead.html.erb (2.0ms)
+  Rendered shared/_blog_nav.html.erb (1.4ms)
+  Rendered shared/_blog_sidebar.html.erb (0.8ms)
+  Rendered shared/_blog_footer.html.erb (0.7ms)
+Completed 200 OK in 161ms (Views: 151.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 19:54:40 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (2.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (11.2ms)
+  Rendered blogs/index.html.erb within layouts/blog (19.5ms)
+  Rendered shared/_blog_masthead.html.erb (1.1ms)
+  Rendered shared/_blog_nav.html.erb (1.8ms)
+  Rendered shared/_blog_sidebar.html.erb (0.6ms)
+  Rendered shared/_blog_footer.html.erb (0.6ms)
+Completed 200 OK in 170ms (Views: 161.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 19:55:02 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (7.1ms)
+  Rendered blogs/index.html.erb within layouts/blog (10.7ms)
+  Rendered shared/_blog_masthead.html.erb (0.9ms)
+  Rendered shared/_blog_nav.html.erb (1.3ms)
+  Rendered shared/_blog_sidebar.html.erb (0.4ms)
+  Rendered shared/_blog_footer.html.erb (0.4ms)
+Completed 200 OK in 280ms (Views: 273.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 19:55:19 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (12.2ms)
+  Rendered blogs/index.html.erb within layouts/blog (19.2ms)
+  Rendered shared/_blog_masthead.html.erb (0.8ms)
+  Rendered shared/_blog_nav.html.erb (0.8ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.4ms)
+Completed 200 OK in 374ms (Views: 363.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 19:57:46 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (12.9ms)
+  Rendered blogs/index.html.erb within layouts/blog (43.7ms)
+  Rendered shared/_blog_masthead.html.erb (2.1ms)
+  Rendered shared/_blog_nav.html.erb (1.9ms)
+  Rendered shared/_blog_sidebar.html.erb (1.1ms)
+  Rendered shared/_blog_footer.html.erb (0.7ms)
+Completed 200 OK in 315ms (Views: 289.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 20:00:54 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (21.4ms)
+  Rendered blogs/index.html.erb within layouts/blog (43.3ms)
+  Rendered shared/_blog_masthead.html.erb (0.9ms)
+  Rendered shared/_blog_nav.html.erb (1.7ms)
+  Rendered shared/_blog_sidebar.html.erb (0.4ms)
+  Rendered shared/_blog_footer.html.erb (0.4ms)
+Completed 200 OK in 507ms (Views: 466.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 20:02:18 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (7.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (12.2ms)
+  Rendered shared/_blog_masthead.html.erb (1.1ms)
+  Rendered shared/_blog_nav.html.erb (2.8ms)
+  Rendered shared/_blog_sidebar.html.erb (0.9ms)
+  Rendered shared/_blog_footer.html.erb (0.6ms)
+Completed 200 OK in 165ms (Views: 153.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 20:03:18 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (12.4ms)
+  Rendered blogs/index.html.erb within layouts/blog (19.6ms)
+  Rendered shared/_blog_masthead.html.erb (10.4ms)
+  Rendered shared/_blog_nav.html.erb (2.4ms)
+  Rendered shared/_blog_sidebar.html.erb (0.6ms)
+  Rendered shared/_blog_footer.html.erb (0.8ms)
+Completed 200 OK in 138ms (Views: 131.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 20:03:21 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (20.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [10 times] (9.6ms)
+  Rendered blogs/index.html.erb within layouts/blog (15.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.8ms)
+  Rendered shared/_blog_nav.html.erb (1.1ms)
+  Rendered shared/_blog_sidebar.html.erb (0.4ms)
+  Rendered shared/_blog_footer.html.erb (0.4ms)
+Completed 200 OK in 107ms (Views: 80.9ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 20:11:10 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 16.1ms)
+
+
+  
+NoMethodError (undefined method `per' for nil:NilClass):
+  
+app/controllers/blogs_controller.rb:9:in `index'
+Started GET "/blogs" for ::1 at 2019-12-06 20:12:23 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [5 times] (12.5ms)
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/kaminari-activerecord-1.1.1/lib/kaminari/activerecord/active_record_relation_methods.rb:33
+  Rendered blogs/index.html.erb within layouts/blog (57.3ms)
+  Rendered shared/_blog_masthead.html.erb (2.5ms)
+  Rendered shared/_blog_nav.html.erb (1.7ms)
+  Rendered shared/_blog_sidebar.html.erb (0.4ms)
+  Rendered shared/_blog_footer.html.erb (0.7ms)
+Completed 200 OK in 973ms (Views: 923.9ms | ActiveRecord: 25.7ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 20:12:57 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [5 times] (3.3ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/kaminari-activerecord-1.1.1/lib/kaminari/activerecord/active_record_relation_methods.rb:33
+  Rendered blogs/index.html.erb within layouts/blog (15.6ms)
+  Rendered shared/_blog_masthead.html.erb (0.7ms)
+  Rendered shared/_blog_nav.html.erb (1.1ms)
+  Rendered shared/_blog_sidebar.html.erb (0.7ms)
+  Rendered shared/_blog_footer.html.erb (0.6ms)
+Completed 200 OK in 91ms (Views: 85.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 20:13:11 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [5 times] (6.5ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/kaminari-activerecord-1.1.1/lib/kaminari/activerecord/active_record_relation_methods.rb:33
+  Rendered blogs/index.html.erb within layouts/blog (31.7ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  Rendered shared/_blog_nav.html.erb (1.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.4ms)
+  Rendered shared/_blog_footer.html.erb (0.4ms)
+Completed 200 OK in 120ms (Views: 115.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blogs?page=2" for ::1 at 2019-12-06 20:13:14 -0500
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (2.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [5 times] (5.5ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/kaminari-activerecord-1.1.1/lib/kaminari/activerecord/active_record_relation_methods.rb:33
+  Rendered blogs/index.html.erb within layouts/blog (23.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.6ms)
+  Rendered shared/_blog_nav.html.erb (1.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.4ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 99ms (Views: 86.3ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 20:14:00 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (2.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [5 times] (3.6ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/kaminari-activerecord-1.1.1/lib/kaminari/activerecord/active_record_relation_methods.rb:33
+  Rendered blogs/index.html.erb within layouts/blog (21.3ms)
+  Rendered shared/_blog_masthead.html.erb (21.9ms)
+  Rendered shared/_blog_nav.html.erb (1.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 125ms (Views: 103.5ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 20:19:23 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (3.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [5 times] (6.4ms)
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/kaminari-activerecord-1.1.1/lib/kaminari/activerecord/active_record_relation_methods.rb:33
+  Rendered blogs/index.html.erb within layouts/blog (35.9ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  Rendered shared/_blog_nav.html.erb (0.9ms)
+  Rendered shared/_blog_sidebar.html.erb (0.8ms)
+  Rendered shared/_blog_footer.html.erb (1.1ms)
+Completed 200 OK in 130ms (Views: 112.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 20:20:11 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/kaminari-activerecord-1.1.1/lib/kaminari/activerecord/active_record_relation_methods.rb:33
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:11
+  Rendered collection of blogs/_blog.html.erb [5 times] (4.8ms)
+  Rendered blogs/index.html.erb within layouts/blog (32.4ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  Rendered shared/_blog_nav.html.erb (1.1ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.7ms)
+Completed 200 OK in 130ms (Views: 123.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 20:20:43 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:7
+  Rendered collection of blogs/_blog.html.erb [5 times] (5.9ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/kaminari-activerecord-1.1.1/lib/kaminari/activerecord/active_record_relation_methods.rb:33
+  Rendered blogs/index.html.erb within layouts/blog (27.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.9ms)
+  Rendered shared/_blog_nav.html.erb (1.3ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.8ms)
+Completed 200 OK in 133ms (Views: 120.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/blogs" for ::1 at 2019-12-06 20:21:11 -0500
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/kaminari-activerecord-1.1.1/lib/kaminari/activerecord/active_record_relation_methods.rb:33
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/blogs/index.html.erb:11
+  Rendered collection of blogs/_blog.html.erb [5 times] (5.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (30.3ms)
+  Rendered shared/_blog_masthead.html.erb (0.6ms)
+  Rendered shared/_blog_nav.html.erb (1.1ms)
+  Rendered shared/_blog_sidebar.html.erb (0.7ms)
+  Rendered shared/_blog_footer.html.erb (0.6ms)
+Completed 200 OK in 149ms (Views: 142.8ms | ActiveRecord: 2.1ms)
+
+

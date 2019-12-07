@@ -13,12 +13,7 @@
 
   <body>
 
-    <!-- start of blog header -->
-    <div class="text-center">
-      <h2 class="blog-header-logo text-dark" href="#">James Hubert Blog</h2>
-      <%= login_helper('p-2 blog-login-helper') %>
-    </div>
-    <!-- end of blog header -->
+    <%= render 'shared/blog_masthead' %><br>
 
     <%= render 'shared/blog_nav' %><br>
 
@@ -34,15 +29,7 @@
 
     </main>
 
-
-    <!-- start of footer -->
-    <footer class="blog-footer">
-      <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
-    </footer>
-    <!-- end of footer -->
+    <%= render 'shared/blog_footer' %><br>
 
     <%= session_tracker_helper %>
 

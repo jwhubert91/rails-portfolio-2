@@ -1,4 +1,6 @@
-<h1>Create a New Work (Portfolio item)</h1>
-<h3>(Found at app/views/works/new.html.erb)</h3>
+<section class="container portfolio-form">
+	<h1>Create a New Work (Portfolio item)</h1>
+	<%= render 'form', portfolio_item: @portfolio_item %>
+</section>
 
-<%= render 'form', portfolio_item: @portfolio_item %>
+

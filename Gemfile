@@ -63,3 +63,4 @@ gem 'hubert_copyright_tool', git: "https://github.com/jwhubert91/hubert_copyrigh
 gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'font-awesome-rails'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'jquery-ui-rails'

@@ -1,7 +1,4 @@
 <div class="<%= location %>">
-	<%= link_to "Home", root_path %>
-	<%= link_to "About Me", about_path %>
-	<%= link_to "Contact", contact_path %>
-	<%= link_to "Blog", blogs_path %>
-	<%= link_to "Portfolio", works_path %>
+	<%= nav_helper('nav-link','span') %>
+  <%= login_helper('nav-link') %>
 </div>

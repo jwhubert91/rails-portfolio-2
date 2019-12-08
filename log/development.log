@@ -28725,3 +28725,94 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 94ms (Views: 90.3ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (9.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8032448616015099150)[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+Migrating to AddPositionToWorks (20191208194107)
+  [1m[35m (5.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[35m (23.9ms)[0m  [1m[35mALTER TABLE "works" ADD "position" integer[0m
+  ↳ db/migrate/20191208194107_add_position_to_works.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (4.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191208194107"]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[36mActiveRecord::InternalMetadata Load (3.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(8032448616015099150)[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.5/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+Started GET "/" for ::1 at 2019-12-08 14:42:33 -0500
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (3.2ms)
+  Rendered shared/_application_nav.html.erb (96.8ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 1218ms (Views: 1165.3ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/works" for ::1 at 2019-12-08 14:42:37 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (1.6ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY position ASC[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (10.5ms)
+  Rendered works/index.html.erb within layouts/work (54.3ms)
+  Rendered shared/_work_nav.html.erb (1.5ms)
+  Rendered shared/_work_jumbotron.html.erb (0.9ms)
+  Rendered shared/_work_footer.html.erb (0.8ms)
+Completed 200 OK in 123ms (Views: 109.9ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/works" for ::1 at 2019-12-08 14:42:37 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY position ASC[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (7.4ms)
+  Rendered works/index.html.erb within layouts/work (10.0ms)
+  Rendered shared/_work_nav.html.erb (1.5ms)
+  Rendered shared/_work_jumbotron.html.erb (1.0ms)
+  Rendered shared/_work_footer.html.erb (1.1ms)
+Completed 200 OK in 94ms (Views: 90.9ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mWork Load (1.0ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  [1m[36mWork Load (0.6ms)[0m  [1m[34mSELECT  "works".* FROM "works" ORDER BY "works"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mWork Update (8.0ms)[0m  [1m[33mUPDATE "works" SET "position" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["position", 2], ["updated_at", "2019-12-08 19:44:30.071367"], ["id", 10]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/works" for ::1 at 2019-12-08 14:44:36 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY position ASC[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (5.4ms)
+  Rendered works/index.html.erb within layouts/work (8.9ms)
+  Rendered shared/_work_nav.html.erb (0.9ms)
+  Rendered shared/_work_jumbotron.html.erb (1.0ms)
+  Rendered shared/_work_footer.html.erb (0.8ms)
+Completed 200 OK in 94ms (Views: 89.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/works" for ::1 at 2019-12-08 14:48:20 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY position ASC[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (11.1ms)
+  Rendered works/index.html.erb within layouts/work (29.1ms)
+  Rendered shared/_work_nav.html.erb (1.7ms)
+  Rendered shared/_work_jumbotron.html.erb (1.5ms)
+  Rendered shared/_work_footer.html.erb (1.0ms)
+Completed 200 OK in 177ms (Views: 108.7ms | ActiveRecord: 13.5ms)
+
+

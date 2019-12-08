@@ -3,7 +3,7 @@ class WorksController < ApplicationController
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
 	def index
-		@portfolio_items = Work.all
+		@portfolio_items = Work.by_position
 	end
 
   def angular

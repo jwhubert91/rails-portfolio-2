@@ -18,4 +18,8 @@ class Work < ApplicationRecord
 		self.thumb_img ||= Placeholder.image_generator(height: '350',width: '250')
 	end
 
+	def self.by_position
+		order("position ASC")
+	end
+
 end

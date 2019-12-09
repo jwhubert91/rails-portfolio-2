@@ -28938,3 +28938,151 @@ Processing by WorksController#index as HTML
 Completed 200 OK in 8930ms (Views: 8840.5ms | ActiveRecord: 25.5ms)
 
 
+Started GET "/works" for ::1 at 2019-12-08 18:11:06 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (3.1ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY position ASC[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (8.1ms)
+  Rendered works/index.html.erb within layouts/work (53.1ms)
+  Rendered shared/_work_nav.html.erb (1.8ms)
+  Rendered shared/_work_jumbotron.html.erb (0.6ms)
+  Rendered shared/_work_footer.html.erb (0.7ms)
+Completed 200 OK in 2026ms (Views: 1903.0ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/works" for ::1 at 2019-12-08 18:11:43 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (1.0ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY position ASC[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (6.4ms)
+  Rendered works/index.html.erb within layouts/work (11.3ms)
+  Rendered shared/_work_nav.html.erb (1.5ms)
+  Rendered shared/_work_jumbotron.html.erb (0.7ms)
+  Rendered shared/_work_footer.html.erb (14.6ms)
+Completed 200 OK in 650ms (Views: 646.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/works" for ::1 at 2019-12-08 18:13:13 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (1.6ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY position ASC[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (13.3ms)
+  Rendered works/index.html.erb within layouts/work (38.0ms)
+  Rendered shared/_work_nav.html.erb (1.4ms)
+  Rendered shared/_work_jumbotron.html.erb (0.9ms)
+  Rendered shared/_work_footer.html.erb (0.8ms)
+Completed 200 OK in 2028ms (Views: 1954.5ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/works" for ::1 at 2019-12-08 19:50:23 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.9ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY position ASC[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (13.9ms)
+  Rendered works/index.html.erb within layouts/work (22.9ms)
+  Rendered shared/_work_nav.html.erb (1.7ms)
+  Rendered shared/_work_jumbotron.html.erb (0.8ms)
+  Rendered shared/_work_footer.html.erb (1.0ms)
+Completed 200 OK in 656ms (Views: 643.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/works" for ::1 at 2019-12-08 19:50:33 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.6ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY position ASC[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (5.0ms)
+  Rendered works/index.html.erb within layouts/work (7.6ms)
+  Rendered shared/_work_nav.html.erb (2.6ms)
+  Rendered shared/_work_jumbotron.html.erb (1.5ms)
+  Rendered shared/_work_footer.html.erb (1.0ms)
+Completed 200 OK in 272ms (Views: 269.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/works" for ::1 at 2019-12-08 19:50:55 -0500
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY position ASC[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (9.7ms)
+  Rendered works/index.html.erb within layouts/work (12.8ms)
+  Rendered shared/_work_nav.html.erb (1.9ms)
+  Rendered shared/_work_jumbotron.html.erb (1.2ms)
+  Rendered shared/_work_footer.html.erb (0.9ms)
+Completed 200 OK in 307ms (Views: 303.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2019-12-08 20:04:28 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (37.0ms)
+  Rendered shared/_application_nav.html.erb (2.4ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 506ms (Views: 495.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-12-08 20:04:29 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (30.6ms)
+  Rendered shared/_application_nav.html.erb (3.5ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+Completed 200 OK in 355ms (Views: 352.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-12-08 20:04:39 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rVp+NQcu9MC9BhMsQ203r5BxyR6ZnCgDDGNnkkJCqJ3bTQ2i2AwqkqTkSs0wbYTHROUCi1wZJGFiEvIIV/29yQ==", "user"=>{"email"=>"james@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "james@test.com"], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+Redirected to http://localhost:3000/
+Completed 302 Found in 262ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/" for ::1 at 2019-12-08 20:04:40 -0500
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered shared/_application_nav.html.erb (7.4ms)
+  Rendered shared/_application_footer.html.erb (0.6ms)
+Completed 200 OK in 289ms (Views: 266.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/works" for ::1 at 2019-12-08 20:04:45 -0500
+Processing by WorksController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (4.6ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY position ASC[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (7.4ms)
+  Rendered works/index.html.erb within layouts/work (15.9ms)
+  Rendered shared/_work_nav.html.erb (1.2ms)
+  Rendered shared/_work_footer.html.erb (0.8ms)
+Completed 200 OK in 304ms (Views: 291.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/works" for ::1 at 2019-12-08 20:04:45 -0500
+Processing by WorksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/jameshubert/.rvm/gems/ruby-2.6.3/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering works/index.html.erb within layouts/work
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY position ASC[0m
+  ↳ app/views/works/index.html.erb:4
+  Rendered collection of works/_work.html.erb [9 times] (5.5ms)
+  Rendered works/index.html.erb within layouts/work (9.4ms)
+  Rendered shared/_work_nav.html.erb (0.6ms)
+  Rendered shared/_work_footer.html.erb (0.4ms)
+Completed 200 OK in 217ms (Views: 213.8ms | ActiveRecord: 1.0ms)
+
+

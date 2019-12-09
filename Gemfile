@@ -15,6 +15,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+gem 'jquery-ui-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -63,4 +64,3 @@ gem 'hubert_copyright_tool', git: "https://github.com/jwhubert91/hubert_copyrigh
 gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'font-awesome-rails'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
-gem 'jquery-ui-rails'

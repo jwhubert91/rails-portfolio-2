@@ -18,7 +18,14 @@
 
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-              <div id="image-background"></div>
+              <%= video_tag(
+                'bg-video-compressed.mp4',
+                id: 'image-background',
+                autoplay: true,
+                muted: true,
+                loop: true,
+                poster: 'video_screenshot.jpg'
+              ) %>
 
               <%= render "shared/application_nav" %>
 
